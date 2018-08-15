@@ -1,0 +1,51 @@
+DESIGN REPORT
+
+WORK DISTRIBUTION
+Callum and I worked together for the first day and then worked separately
+on the second and third days. Our first design was simple, with buttons to
+add Circle, add Box, add Text, add Polygon, add Line. As an extension from
+the basic idea we decided to add a save/load functionality and maybe image
+loading functionality too.
+
+We knew we wanted to be able to modify the colour and size of each object, 
+be able to move the object around, and remove objects with doubleclick. 
+We later discovered that doubleclick didn't work, and so we decided to make
+a remove toggle button. 
+We played around with the idea of using a slider to resize objects, but I
+didn't end up implementing that, instead prompting for pixel size in text 
+pane. We also wanted a selection mode that outlined the selected object.
+
+Our initial design allowed the user to move the object by selecting it and
+then selecting where they wanted the midpoint of the object to go. When 
+working separately I decided to try to get it to move by dragging the object
+which worked. We decided we would have a Shape interface which had Box class, 
+Circle class, and Polygon class (which we did not implement), and would have a 
+Text class and Line class that did not implement Shape. However, when 
+working separately I decided to include both those classes under the Shape 
+interface as it made it easier to draw the graphics pane and save/load shapes.
+We decided the three attributes all shapes should have are colour, position,
+and size.
+
+Callum and I worked together on the 'selection' functionality of the Box
+class and Circle class, and I later expanded this to include Text and Line.
+Callum came up with the idea to change the colour of the set colour button 
+to the selected colour. The rest of our programs features we came up with
+on our own.
+
+For example, I came up with the idea to allow the user to change the 
+colour/size using the JColourChooser, as well as making it so that any
+changes to the colour or size affected all future shapes UNLESS a shape
+is selected (in which case only the selected shape is affected).
+
+THINGS TO NOTE
+Annoying things that I am aware of and ran out of time to fix:
+- You can only move text up and to the right
+- Lines can only be selected/removed by clicking around the start point of
+  the line
+
+DESCRIPTION
+This program is a diagram editor. You can place and resize/recolour boxes,
+circles, lines, and text. You can remove items drawn by toggling on Remove
+Mode (button is red when mode is active). You can clear all items, save
+the diagram to a text file, and load a diagram from a text file.
+
